@@ -1,0 +1,20 @@
+version: '3'
+services:
+###> doctrine/doctrine-bundle ###
+  database:
+    image: mysql:8
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: yRXxqAnzfPeK2HLw
+      MYSQL_DATABASE: app_db
+      MYSQL_USER: mysql_user
+      MYSQL_PASSWORD: mysql_password
+    volumes:
+      - database_data:/var/log/mysql:rw
+###< doctrine/doctrine-bundle ###
+
+volumes:
+###> doctrine/doctrine-bundle ###
+  database_data:
+###< doctrine/doctrine-bundle ###
